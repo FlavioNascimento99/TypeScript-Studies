@@ -29,6 +29,7 @@ Também podemos passar todos os atributos direto dentro do escopo de parâmetros
           public wins: number,
           public style: string
      ) {}
+
 }
 
 // Construtor padrão, chamando a variável e criando com o 'New Lutador()', sendo assim criamos um objeto, porém sem nenhuma propriedade

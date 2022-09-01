@@ -10,8 +10,7 @@ let key = prompt();
 
 let option: number = 0;
 
-
-while(option != 6){
+while(option != 6 || personagem.nocauteado() == false){
      console.log("================- CT -================")
      console.log("| 1 - Sparring             (+ Ataque)|")
      console.log("| 2 - Treino Reflexo       (+ Defesa)|")
@@ -23,22 +22,34 @@ while(option != 6){
 
      option = +key("Escolha...")
 
+
      switch(option){
 
           case 1: 
                personagem.treinarSparring()
+               personagem.status()
+
                break;
 
           case 2: 
                personagem.treinarReflexo()
+               personagem.status()
+
                break;
           
-          case 3: 
-               personagem.descansar()
+          case 3:
+               let tempoDescanso: number = +key("Quanto tempo deseja descansar? ")
+
+               personagem.descansar(tempoDescanso)
+               personagem.status()
+
                break;
           
-          case 4: 
-          // A fazer
+          case 4:
+               let energiaRestante: number = personagem.lutar()
+               console.log(`Esta luta lhe custou ${energiaRestante} pontos de energia.`);
+               
+               personagem.status() 
                break;
 
           case 5:
@@ -52,3 +63,5 @@ while(option != 6){
      }
 
 }
+
+console.log("Morreu.");

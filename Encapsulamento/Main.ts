@@ -22,7 +22,6 @@ while(option != 6 || personagem.nocauteado() == false){
 
      option = +key("Escolha...")
 
-
      switch(option){
 
           case 1: 

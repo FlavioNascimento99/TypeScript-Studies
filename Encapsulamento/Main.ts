@@ -7,7 +7,6 @@ let personagem: Lutador = new Lutador('Flavio', 100, 23, 12)
 
 // Chamada da Lib PromptSync, responsável por trazer algo parecido com o input que temos em Python.
 let key = prompt();
-
 let option: number = 0;
 
 while(option != 6 || personagem.nocauteado() == false){

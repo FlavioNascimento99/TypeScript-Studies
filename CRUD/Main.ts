@@ -1,4 +1,4 @@
-class Lista {
+export default class Lista {
 
      // Atributos
      private _Nome: string
@@ -10,20 +10,17 @@ class Lista {
      public adicionarItem(nome: string, idade: number) {
           this._Nome = nome;
           this._Idade = idade;
-
           this._Lista.push(this._Nome, this._Idade)
      }
 
      public mostrarLista() {
           console.log(this._Lista)
      }
+
+     public excluirItem() {
+          this._Lista.pop()
+          this._Lista.pop()
+     }
+
+     
 }
-
-let user: Lista = new Lista();
-
-user.adicionarItem("Flavio", 23)
-user.adicionarItem("Nascimento", 27)
-user.adicionarItem("Henrique", 22)
-user.adicionarItem("Savio", 21)
-
-user.mostrarLista()

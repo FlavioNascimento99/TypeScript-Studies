@@ -17,7 +17,6 @@ while(option != 4) {
 
      option = +key("Escolha: ")
 
-
      switch (option) {
           case 1:
                if(option == 1){ 
